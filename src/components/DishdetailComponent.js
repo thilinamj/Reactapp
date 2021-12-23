@@ -16,6 +16,8 @@ class DishDetail extends Component{
 
         if (dish != null) {
             return (
+                <div className="container">
+            <div className="row">
                 <div className='col-12 col-md-5 m-1'>
                     <Card>
                         <CardImg width="100%" src={dish.image} alt={dish.name} />
@@ -24,7 +26,9 @@ class DishDetail extends Component{
                             <CardText> {dish.description} </CardText>
                         </CardBody>
                     </Card>
-                </div>   
+                </div> 
+                </div>
+                </div>  
             );
         }
         else {
@@ -54,12 +58,13 @@ class DishDetail extends Component{
             )
         })
         return (
+            <div className="container">     
             <div className='col-12 col-md-5 m-1'>
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {cmnts}
                 </ul>
-
+            </div>
             </div>
         )
     }
